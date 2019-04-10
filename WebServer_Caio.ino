@@ -1,20 +1,16 @@
 /*
   Web Server
-
   A simple web server that shows the value of the analog input pins.
   using an Arduino Wiznet Ethernet shield.
-
   Circuit:
    Ethernet shield attached to pins 10, 11, 12, 13
    Analog inputs attached to pins A0 through A5 (optional)
-
   created 18 Dec 2009
   by David A. Mellis
   modified 9 Apr 2012
   by Tom Igoe
   modified 02 Sept 2015
   by Arturo Guadalupi
-
 */
 
 #include <SPI.h>
@@ -86,32 +82,31 @@ void loop() {
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
           client.println("<p style =\"color: black\">Aqui voce consegue controlar diversos botoes que acionam saidas digitais dos pinos 1, 2, 3, 4 e 9 de um ARDUINO ETHERNET, esse programa foi desenvolvido e escrito por CAIO VINICIUS</p>");
-          // output the value of each analog input pin
-          client.println("<body style = \"background-color:lightblue\"></body>");
+          // output the value of each analog input pin          
 
           client.println("<div>");
-          client.println("<button style=height:60px; width:150px><a href = \"?on9\">PINO9 - ON</a></button>");
-          client.println("<button style=height:60px; width:150px><a href =\"?off9\">PINO9 - OFF</a></button>");
+          client.println("<button><a href = \"?on9\">PINO9 - ON</a></button>");
+          client.println("<button><a href =\"?off9\">PINO9 - OFF</a></button>");
           client.println("</div>");
           
           client.println("<div>");
-          client.println("<button style=height:60px; width:150px><a href = \"?on1\">PINO1 - ON</a></button>");
-          client.println("<button style=height:60px; width:150px><a href =\"?off1\">PINO1 - OFF</a></button>");
+          client.println("<button><a href = \"?on1\">PINO1 - ON</a></button>");
+          client.println("<button><a href =\"?off1\">PINO1 - OFF</a></button>");
           client.println("</div>");
           
           client.println("<div>");
-          client.println("<button style=height:60px; width:150px><a href = \"?on2\">PINO2 - ON</a></button>");
-          client.println("<button style=height:60px; width:150px><a href =\"?off2\">PINO2 - OFF</a></button>");
+          client.println("<button ><a href = \"?on2\">PINO2 - ON</a></button>");
+          client.println("<button ><a href =\"?off2\">PINO2 - OFF</a></button>");
           client.println("</div>");
           
           client.println("<div>");
-          client.println("<button style=height:60px; width:150px><a href = \"?on3\">PINO3 - ON</a></button>");
-          client.println("<button style=height:60px; width:150px><a href =\"?off3\">PINO3 - OFF</a></button>");
+          client.println("<button><a href = \"?on3\">PINO3 - ON</a></button>");
+          client.println("<button><a href =\"?off3\">PINO3 - OFF</a></button>");
           client.println("</div>");
           
           client.println("<div>");
-          client.println("<button style=height:60px; width:150px><a href = \"?on4\">PINO4 - ON</a></button>");
-          client.println("<button style=height:60px; width:150px><a href =\"?off4\">PINO4 - OFF</a></button>");
+          client.println("<button><a href = \"?on4\">PINO4 - ON</a></button>");
+          client.println("<button><a href =\"?off4\">PINO4 - OFF</a></button>");
           client.println("</div>");
 
           client.println("</html>");
@@ -171,5 +166,3 @@ void loop() {
     Serial.println("client disconnected");
   }
 }
-
-
